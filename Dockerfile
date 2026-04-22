@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:25-jre
 WORKDIR /opt/
 ENV VERSION=1.21.1
 ENV MEMORY=4G
