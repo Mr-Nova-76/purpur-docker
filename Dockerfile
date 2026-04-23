@@ -19,7 +19,7 @@ RUN apt-get update && \
 WORKDIR /opt/
 COPY setup.sh /opt/
 COPY --from=builder /download/server.jar /opt/purpur/server.jar
-RUN chmod +x /setup.sh && mkdir -p /opt/purpur
+RUN chmod +x /opt/setup.sh && mkdir -p /opt/purpur
 
 ENV VERSION=1.21.1
 ENV MEMORY=4G
