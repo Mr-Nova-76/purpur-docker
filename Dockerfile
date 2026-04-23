@@ -9,8 +9,12 @@ WORKDIR /download
 ARG VERSION=1.21.1
 RUN curl -o server.jar "https://api.purpurmc.org/v2/purpur/${VERSION}/latest/download"
 
-# Stage 2: Final image (no curl!)
+# Stage 2: Final image
 FROM eclipse-temurin:25-jre
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends curl && \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt/
 COPY setup.sh /opt/
