@@ -1,5 +1,7 @@
 # purpurmc-docker
 Unofficial docker image for [purpurmc](https://purpurmc.org/).
+Fork from ghcr.io/n0r1uno/purpurmc-docker
+I updatet the image to the newest Java Version to run the newer Minecraft Versions.
 
 ## Usage Example
 ```
@@ -27,7 +29,7 @@ Example to create an unprivileged user `minecraft` on the host system, set up pe
  ```
 services:
   purpurmc:
-    image: ghcr.io/n0r1uno/purpurmc-docker
+    image: ghcr.io/mr-nova-76/purpur-docker:1776968518
     container_name: purpurmc
     environment:
       - EULA=true
